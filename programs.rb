@@ -1,4 +1,5 @@
 # class with information about training
+
 class WorkoutProgram
   def program_1
     "Тренировка1

@@ -1,5 +1,4 @@
 require 'telegram/bot'
-# require 'sdbm'
 require 'json'
 # require 'pg'
 
