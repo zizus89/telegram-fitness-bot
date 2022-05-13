@@ -1,4 +1,5 @@
-module WorkoutProgram
+# class with information about training
+class WorkoutProgram
   def program_1
     "Тренировка1
     Размминка(каридо 10-15 мин, пресс + гиперэкстензия 3х15, упр Bird Dog)
