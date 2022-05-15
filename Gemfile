@@ -2,5 +2,8 @@
 
 source 'https://rubygems.org'
 
-gem 'telegram-bot-ruby'
+gem 'auto_html'
+gem 'erb', '~> 2.2', '>= 2.2.3'
+gem 'i18n'
 gem 'json'
+gem 'telegram-bot-ruby'
