@@ -1,4 +1,4 @@
-# videos and links for exercises
+# videos in links for exercises 
 
 module Exercises
   def kettlebell_swings
