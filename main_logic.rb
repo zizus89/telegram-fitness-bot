@@ -1,8 +1,5 @@
 # main logic for application
 
-require_relative 'videos_for_workout'
-include Exercises
-
 class MainLogic
   TOKEN = '5224419221:AAHniEDCkj2hEm9VzbS0Uzsx1rTQnfQO548'.freeze
 
@@ -30,31 +27,31 @@ class MainLogic
           when /\A\s*тренировка 6.*|\A\s*треня 6.*|\A\s*тренька 6.*|\A\s*мучение 6.*/i
             bot.api.send_message(chat_id: message.chat.id, text: WorkoutProgram.program_6)
           when /махи (гири|гантели|блина)/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.kettlebell_swings)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/dZKPJhVbcTw')
           when /горизонтальная тяга|тяга горизонтальная/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.horizontal_pull)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/0-PzqaAb_ls')
           when /вертикальная тяга|тяга вертикальная/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.vertical_pull)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/gSFc9eU6wH4')
           when /отжимани(е|я)/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.push_up)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/aAh8XmiwV4g')
           when /жим горизонтальный|горизонтальный жим/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.push_horizontal)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/XUeE5cTzsfo')
           when /отведени(е|я) бедра/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.hip_abduction)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/Er3jBZd_NQA')
           when /приседани(е|я) с жимом гантелей|Присед с вертикальным жимом гантель/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.thrusters)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/bvLIuwPySSI')
           when /тяга кинга/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.king_one_leg_deadlift)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/wSC8e2-sF9c')
           when /становая тяга на одной ноге/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.one_leg_deadlift_and_horizomtal_pull)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/retxH99krJA')
           when /приведени(е|я) бедра/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.hip_adduction)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/TGW_c-9XVYQ')
           when /разгибани(е|я) голени/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.shin_extension)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/IEM5z5OQ-mo')
           when /cгибани(е|я) голени/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.shin_flexion)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/Dz1XFU3WSbQ')
           when /жим платформы одной ногой/i
-            bot.api.send_message(chat_id: message.chat.id, text: 'правильное выполнение ↓', reply_markup: Exercises.push_platform_one_leg)
+            bot.api.send_message(chat_id: message.chat.id, text: 'https://youtu.be/LL0uQJthemo')
           end
         end
       end
