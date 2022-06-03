@@ -10,5 +10,5 @@ include StartDesc
 require_relative 'main_logic'
 include MainLogic
 
-require_relative 'videos_and_workout'
-include Exercises
+# require_relative 'videos_and_workout'
+# include Exercises
