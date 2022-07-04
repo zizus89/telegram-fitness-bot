@@ -27,9 +27,9 @@ class MainLogic
           case message.to_s
           when /\/start/i
             bot.api.send_message(chat_id: message.chat.id, text: StartDesc.desc_text)
-          when /\A\s*bye.*|\A\s*пока.*|\A\s*досвидания.*|\A\s*всего доброго.*|\A\s*стоп.*|\A\s*stop.*/i
+          when /\A\sbye|\A\sпока|\A\sдосвидания|\A\sвсего доброго|\A\sстоп|\A\sstop/i
             bot.api.send_message(chat_id: message.chat.id, text: "Всего доброго, #{message.from.first_name}!")
-          when /\A\s*привет.*|\A\s*hi.*|hello/i
+          when /\A\sпривет|\A\sку|\A\sхай|\A\shi|\A\shello/i
             answers_gender =
               Telegram::Bot::Types::ReplyKeyboardMarkup
               .new(keyboard: ['Для мужчин', 'Для девушек'], one_time_keyboard: true)
@@ -49,11 +49,11 @@ class MainLogic
               text: "#{message.from.first_name} выбери программу",
               reply_markup: answer_program
             )
+
           # выбранная программа для мужчин
           when /\AТренировки.*мужчин/i
             ch_pr = choice_program_for_man.map { |key, value| value if key[message.to_s] }.compact
             bot.api.send_message(chat_id: message.chat.id, text: ch_pr.join)
-
           # для женщин
           when /\Aдля девушек/i
             answer_program =

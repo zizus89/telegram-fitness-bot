@@ -2,8 +2,9 @@
 
 source 'https://rubygems.org'
 
+ruby "3.0.4"
 gem 'auto_html'
-gem 'erb', '~> 2.2', '>= 2.2.3'
+gem 'erb'
 gem 'i18n'
 gem 'json'
 gem 'telegram-bot-ruby'
@@ -13,3 +14,5 @@ gem 'activemodel'
 gem 'arel'
 gem 'rake'
 gem 'pg'
+gem "cgi", ">= 0.3.1"
+
