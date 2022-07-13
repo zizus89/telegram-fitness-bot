@@ -27,9 +27,9 @@ class MainLogic
           case message.to_s
           when /\/start/i
             bot.api.send_message(chat_id: message.chat.id, text: StartDesc.desc_text)
-          when /\A\sbye|\A\sпока|\A\sдосвидания|\A\sвсего доброго|\A\sстоп|\A\sstop/i
+          when /\Abye|\Aпока|\Aдосвидания|\Aвсего доброго|\Aстоп|\Astop/i
             bot.api.send_message(chat_id: message.chat.id, text: "Всего доброго, #{message.from.first_name}!")
-          when /\A\sпривет|\A\sку|\A\sхай|\A\shi|\A\shello/i
+          when /\Aпривет|\Aхай|\Ahi|\Ahello/i
             answers_gender =
               Telegram::Bot::Types::ReplyKeyboardMarkup
               .new(keyboard: ['Для мужчин', 'Для девушек'], one_time_keyboard: true)
